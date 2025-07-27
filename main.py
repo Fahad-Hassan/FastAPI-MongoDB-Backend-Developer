@@ -5,9 +5,10 @@ from bson import ObjectId
 from typing import List
 
 app = FastAPI()
-
+#mongodb+srv://FAST_API_TEST:addhere/mongodb+srv://FAST_API_TEST:
+secret = ""
 # MongoDB setup
-client = AsyncIOMotorClient("mongodb+srv://FAST_API_TEST:EeDabC6Js8xEzOBm@cluster0.iynsonj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = AsyncIOMotorClient(secret)
 db = client["fastapi_db"]
 collection = db["items"]
 if(db.connection is None):
